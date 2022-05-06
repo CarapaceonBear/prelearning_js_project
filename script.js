@@ -1,5 +1,10 @@
 function checkPolarity(event) {
-    pass;
+    let polarityNumber = event.target.value;
+    if (polarityNumber >= 0) {
+        alert("That number is positive")
+    } else {
+        alert("That number is negative")
+    }
 }
 
 function daysToAge(event){
