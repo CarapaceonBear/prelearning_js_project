@@ -38,7 +38,12 @@ function largestOfThree(event) {
 }
 
 function lastName(event) {
-    pass;
+    let names = event.target.value;
+    let namesArray = names.split(" ");
+
+    let lastName = namesArray[namesArray.length - 1];
+
+    alert ("The last name in the list is " + lastName);
 }
 
 function allNumbersPositive(event) {
