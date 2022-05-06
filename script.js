@@ -7,7 +7,7 @@ function checkPolarity(event) {
     }
 }
 
-function daysToAge(event){
+function daysToAge(event) {
     let days = event.target.value;
     let years = Math.floor(days / 365);
     let remainder = (days - (years * 365))
@@ -19,14 +19,28 @@ function daysToAge(event){
     }
 }
 
-function largestOfThree(event){
+function largestOfThree(event) {
+    let threeNumbers = event.target.value;
+    let threeArray = threeNumbers.split(" ");
+    // have to cast the array values back into integers for the calculation to work
+    for (let index = 0; index < threeArray.length; index++ ) {
+        threeArray[index] = parseInt(threeArray[index]);
+    }
+
+    // using a loop to account flexibly for more than three numbers
+    let largestNumber = 0;
+    for (let index = 1; index < threeArray.length + 1; index++) {
+        if (threeArray[index] > threeArray[largestNumber]) {
+            largestNumber = index;
+        }
+    }
+    alert ("The largest of those numbers is " + threeArray[largestNumber]);
+}
+
+function lastName(event) {
     pass;
 }
 
-function lastName(event){
-    pass;
-}
-
-function allNumbersPositive(event){
+function allNumbersPositive(event) {
     pass;
 }
