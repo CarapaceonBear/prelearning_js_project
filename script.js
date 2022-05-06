@@ -22,9 +22,9 @@ function daysToAge(event) {
 function largestOfThree(event) {
     let threeNumbers = event.target.value;
     let threeArray = threeNumbers.split(" ");
-    // have to cast the array values back into integers for the calculation to work
+    // have to cast the array values back into floats for the calculation to work
     for (let index = 0; index < threeArray.length; index++ ) {
-        threeArray[index] = parseInt(threeArray[index]);
+        threeArray[index] = parseFloat(threeArray[index]);
     }
 
     // using a loop to account flexibly for more than three numbers
@@ -47,5 +47,23 @@ function lastName(event) {
 }
 
 function allNumbersPositive(event) {
-    pass;
+    let positiveNumbers = event.target.value;
+    let positiveList = positiveNumbers.split(" ");
+    for (let index = 0; index < positiveList.length; index++) {
+        positiveList[index] = parseFloat(positiveList[index]);
+    }
+
+    let allPositive = true
+    for (let index = 0; index < positiveList.length; index++) {
+        if (positiveList[index] < 0) {
+            allPositive = false;
+            break;
+        }
+    }
+
+    if (allPositive == true) {
+        alert ("All the numbers were positive")
+    } else {
+        alert ("Not all the numbers were positive")
+    }
 }
